@@ -18,11 +18,13 @@
 
 <!-- Plugin description -->
 This plugin is a simple wrapper around [Herb LSP](https://github.com/marcoroth/herb) by [Marco Roth](https://github.com/marcoroth).
+
+Herb is an ecosystem of developer tooling built specifically around HTML+ERB (.html.erb) files. It is designed to simplify and enhance the experience of working with HTML+ERB templates through precise, accurate tooling.
 <!-- Plugin description end -->
 
 ## Installation
 
-- Install the Herb Language Server and ensure that `herb` is on your PATH 
-  ```shell
-  npm install -g @herb-tools/language-server
-  ```
+This plugin requires that either:
+
+- Node.js is installed and available in your PATH
+- A Node.js interpreter is setup in your IDE settings (File | Settings | Languages & Frameworks | Node.js | Node interpreter)
