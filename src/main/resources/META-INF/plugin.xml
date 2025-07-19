@@ -1,22 +1,13 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.kcdragon.stimuluslspintellij</id>
-    <name>Stimulus LSP</name>
-    <vendor>kcdragon</vendor>
+    <id>com.herblsp</id>
+    <name>Herb LSP</name>
+    <vendor>mwnciau</vendor>
 
     <depends>com.intellij.modules.platform</depends>
-    <depends>com.intellij.modules.ultimate</depends>
-
-    <resource-bundle>messages.MyBundle</resource-bundle>
+    <depends>JavaScript</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.kcdragon.stimuluslspintellij.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
-
-        <!-- LSP -->
-        <platform.lsp.serverSupportProvider implementation="com.github.kcdragon.stimuluslspintellij.ide.lsp.StimulusLspServerSupportProvider"/>
+        <platform.lsp.serverSupportProvider implementation="com.herblsp.HerbLspServerSupportProvider"/>
     </extensions>
-
-    <applicationListeners>
-        <listener class="com.github.kcdragon.stimuluslspintellij.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
-    </applicationListeners>
 </idea-plugin>

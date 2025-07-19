@@ -1,7 +1,4 @@
-<!-- Keep a Changelog guide -> https://keepachangelog.com -->
-
-# stimulus-lsp-intellij Changelog
-
 ## [Unreleased]
 ### Added
-- Initial scaffold created from [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)
+- Cloned initial scaffold from [Stimulus LSP Intellij](https://github.com/kcdragon/stimulus-lsp-intellij)
+- Renamed everything from stimulus to Herb

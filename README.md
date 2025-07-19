@@ -1,8 +1,8 @@
-# Stimulus LSP Intellij Wrapper
+# Herb LSP Intellij Wrapper
 
-![Build](https://github.com/kcdragon/stimulus-lsp-intellij/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/com.github.kcdragon.stimuluslspintellij.svg)](https://plugins.jetbrains.com/plugin/com.github.kcdragon.stimuluslspintellij)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/com.github.kcdragon.stimuluslspintellij.svg)](https://plugins.jetbrains.com/plugin/com.github.kcdragon.stimuluslspintellij)
+![Build](https://github.com/mwnciau/herb-lsp-intellij/workflows/Build/badge.svg)
+[![Version](https://img.shields.io/jetbrains/plugin/v/com.herblsp.svg)](https://plugins.jetbrains.com/plugin/com.herblsp)
+[![Downloads](https://img.shields.io/jetbrains/plugin/d/com.herblsp.svg)](https://plugins.jetbrains.com/plugin/com.herblsp)
 
 ## Template ToDo list
 - [x] Create a new [IntelliJ Platform Plugin Template][template] project.
@@ -17,37 +17,12 @@
 - [ ] Click the <kbd>Watch</kbd> button on the top of the [IntelliJ Platform Plugin Template][template] to be notified about releases containing new features and fixes.
 
 <!-- Plugin description -->
-This plugin is a simple wrapper around [Stimulus LSP](https://github.com/marcoroth/stimulus-lsp) by [Marco Roth](https://github.com/marcoroth).
-
-Install the Stimulus Language Server
-  
-```shell
-yarn global add stimulus-language-server
-```
-
-Ensure that `stimulus-language-server` is on your `PATH`
+This plugin is a simple wrapper around [Herb LSP](https://github.com/marcoroth/herb) by [Marco Roth](https://github.com/marcoroth).
 <!-- Plugin description end -->
 
 ## Installation
 
-- Install the Stimulus Language Server and ensure that `stimulus-language-server` is on your PATH 
+- Install the Herb Language Server and ensure that `herb` is on your PATH 
   ```shell
-  yarn global add stimulus-language-server
+  npm install -g @herb-tools/language-server
   ```
-
-- Using the IDE built-in plugin system:
-  
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "stimulus-lsp-intellij"</kbd> >
-  <kbd>Install</kbd>
-  
-- Manually:
-
-  Download the [latest release](https://github.com/kcdragon/stimulus-lsp-intellij/releases/latest) and install it manually using
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
-
-
----
-Plugin based on the [IntelliJ Platform Plugin Template][template].
-
-[template]: https://github.com/JetBrains/intellij-platform-plugin-template
-[docs:plugin-description]: https://plugins.jetbrains.com/docs/intellij/plugin-user-experience.html#plugin-description-and-presentation
