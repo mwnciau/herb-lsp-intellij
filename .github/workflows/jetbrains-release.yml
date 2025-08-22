@@ -5,7 +5,16 @@
 name: Release
 on:
   release:
-    types: [prereleased, released]
+  push:
+    tags: ["v*"]
+    # Trigger the workflow only when the jetbrains subdirectory has changed
+    paths:
+      - 'jetbrains/**'
+
+defaults:
+  run:
+    working-directory: ./jetbrains
+
 
 jobs:
 
@@ -18,7 +27,7 @@ jobs:
       pull-requests: write
     steps:
 
-      # Check out current repository
+      # Check out the current repository
       - name: Fetch Sources
         uses: actions/checkout@v4
         with:
@@ -29,13 +38,11 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: zulu
-          java-version: 17
+          java-version: 21
 
       # Setup Gradle
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v3
-        with:
-          gradle-home-cache-cleanup: true
+        uses: gradle/actions/setup-gradle@v4
 
       # Set environment variables
       - name: Export Properties
@@ -51,7 +58,7 @@ jobs:
           echo "$CHANGELOG" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
 
-      # Update Unreleased section with the current release note
+      # Update the Unreleased section with the current release note
       - name: Patch Changelog
         if: ${{ steps.properties.outputs.changelog != '' }}
         env:
