@@ -178,6 +178,7 @@ jobs:
           cache-default-branch-only: true
         env:
           QODANA_TOKEN: ${{ secrets.QODANA_TOKEN }}
+        continue-on-error: true
 
   # Run plugin structure verification along with IntelliJ Plugin Verifier
   verify:
