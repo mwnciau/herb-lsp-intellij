@@ -144,6 +144,7 @@ jobs:
     name: Inspect code
     needs: [ build ]
     runs-on: ubuntu-latest
+    environment: Github Actions
     permissions:
       contents: write
       checks: write
